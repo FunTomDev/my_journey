@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="MyJourney is a website where you can publicate your works and create your own portfolio of amazing and creative works." />
+
+		<link rel="shortcut icon" href="src/ico/favicon-32x32.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="src/ico/apple-touch-icon.png" />
+		<link rel="manifest" href="manifest.webmanifest" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="style.css" />
+
+		<title>MyJourney - Inspire and get inspired</title>
+	</head>
+	<body class="bg-color-700">
+		<header class="main-header bg-color-700">
+			<a href="index.html" class="btn logo">MyJourney</a>
+			<div class="header-links mobile-menu">
+				<nav class="header-nav">
+					<a href="/" class="btn header-nav-link">Home</a>
+					<a href="works.html" class="btn header-nav-link">Explore</a>
+					<a href="about.html" class="btn header-nav-link">About us</a>
+					<a href="faq.html" class="btn header-nav-link">FAQ</a>
+					<a href="contact.html" class="btn header-nav-link">Contact</a>
+				</nav>
+
+				<div class="user-login">
+					<a href="#" class="btn">Log in</a>
+					<a href="#" class="btn btn-accent">Join now</a>
+				</div>
+			</div>
+
+			<div class="header-nav-icon">
+				<button class="btn btn-empty" onclick="openMenu()">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="bars-icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="x-icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</div>
+		</header>
+		<section class="hero-section">
+			<div class="hero-text">
+				<label>Explore over 900+ works here!</label>
+			</div>
+		</section>
+		<section class="recently-added-section">
+			<div class="close-view invisible opaque">
+				<div class="close-view-content">
+					<span class="content-title"></span>
+					<img class="content-image" src="" alt="content-image" />
+					<div class="content-author">
+						<span class="author-name"></span>
+						<img class="author-image" src="" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="filter-container">
+				<h2>Filters</h2>
+				<form action="/search.php" method="get">
+					<input type="text" name="Search asset name" id="asset-search" placeholder="Search assets..." />
+					<div class="filter-category-container category-container">
+						<label for="work-category-select">Category</label>
+						<select name="work-category" id="work-category-select">
+							<option value="abstract" class="work-category-option">Abstract art</option>
+							<option value="fonts" class="work-category-option">Fonts</option>
+							<option value="3d-models" class="work-category-option">3D Models</option>
+							<option value="visualisation" class="work-category-option">Visualisations</option>
+							<option value="logo" class="work-category-option">Logos</option>
+							<option value="web-design" class="work-category-option">Web Design</option>
+							<option value="illustrations" class="work-category-option">Illustrations</option>
+						</select>
+					</div>
+					<div class="filter-category-container work-format">
+						<label for="work-formats">Asset extension</label>
+						<div class="work-format-input-container">
+							<input type="radio" name="work-format" id="jpeg-radio" />
+							<label for="jpeg-radio">JPEG</label>
+						</div>
+
+						<div class="work-format-input-container">
+							<input type="radio" name="work-format" id="png-radio" />
+							<label for="png-radio">PNG</label>
+						</div>
+
+						<div class="work-format-input-container">
+							<input type="radio" name="work-format" id="psd-radio" />
+							<label for="psd-radio">PSD</label>
+						</div>
+
+						<div class="work-format-input-container">
+							<input type="radio" name="work-format" id="tiff-radio" />
+							<label for="tiff-radio">TIFF</label>
+						</div>
+
+						<div class="work-format-input-container">
+							<input type="radio" name="work-format" id="pdf-radio" />
+							<label for="pdf-radio">PDF</label>
+						</div>
+					</div>
+					<a href="search.html" class="btn btn-accent" style="text-align: center">Search</a>
+				</form>
+			</div>
+			<div class="recently-added-container">
+				<h2>Recently added works</h2>
+				<div class="recently-added-works">
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Crystal rose</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image.jpg" alt="Crystal rose author image" class="author-image" />
+								<span class="author-name">Adam Walker</span>
+							</div>
+						</div>
+						<img src="content/previews/crystal-rose.webp" alt="Crystal rose" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Blue shades</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (1).jpg" alt="Blue shades author image" class="author-image" />
+								<span class="author-name">Alice Baker</span>
+							</div>
+						</div>
+						<img src="content/previews/blue-shades.webp" alt="Blue shades" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Planet in space</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (2).jpg" alt="Planet in space author image" class="author-image" />
+								<span class="author-name">Alan Paul</span>
+							</div>
+						</div>
+						<img src="content/previews/rainbow-planet.webp" alt="Planet in space" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Blue crystal circle</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (3).jpg" alt="Blue crystal circle author image" class="author-image" />
+								<span class="author-name">Luke Baltic</span>
+							</div>
+						</div>
+						<img src="content/previews/blue-squares.webp" alt="Blue crystal circle" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Red abstract art</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (4).jpg" alt="Red abstract art author image" class="author-image" />
+								<span class="author-name">Quan Xi</span>
+							</div>
+						</div>
+						<img src="content/previews/red-abstract-art.webp" alt="Red abstract art" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Aesthetic white room</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (5).jpg" alt="Aesthetic white room author image" class="author-image" />
+								<span class="author-name">Rebecca Smith</span>
+							</div>
+						</div>
+						<img src="content/previews/white-abstract-room.webp" alt="Aesthetic white room" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Blue liquid</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (6).jpg" alt="Blue liquid author image" class="author-image" />
+								<span class="author-name">Andrew Stone</span>
+							</div>
+						</div>
+						<img src="content/previews/blue-liquid.webp" alt="Blue liquid" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Blue slices</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (7).jpg" alt="Blue slices author image" class="author-image" />
+								<span class="author-name">Anna Shevchenko</span>
+							</div>
+						</div>
+						<img src="content/previews/blue-slices.webp" alt="Blue slices" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Orange glass slices</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (8).jpg" alt="Orange glass slices author image" class="author-image" />
+								<span class="author-name">Olivia Rodgers</span>
+							</div>
+						</div>
+						<img src="content/previews/orange-slices.webp" alt="Orange glass slices" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Rainbow stripes</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (9).jpg" alt="Rainbow stripes author image" class="author-image" />
+								<span class="author-name">Elon Mayday</span>
+							</div>
+						</div>
+						<img src="content/previews/rainbow-stripes.webp" alt="Rainbow stripes" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">White torus</span>
+							<span class="work-publication-date">11.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (3).jpg" alt="White torus author image" class="author-image" />
+								<span class="author-name">Luke Baltic</span>
+							</div>
+						</div>
+						<img src="content/previews/white-torus.webp" alt="White torus" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Glass blocks</span>
+							<span class="work-publication-date">15.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (3).jpg" alt="Glass blocks author image" class="author-image" />
+								<span class="author-name">Luke Baltic</span>
+							</div>
+						</div>
+						<img src="content/previews/glass-blocks.webp" alt="Glass blocks" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Glass shapes</span>
+							<span class="work-publication-date">16.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (4).jpg" alt="Glass shapes author image" class="author-image" />
+								<span class="author-name">Quan Xi</span>
+							</div>
+						</div>
+						<img src="content/previews/glass-shapes.webp" alt="Glass shapes" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Infinite corridor</span>
+							<span class="work-publication-date">10.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (5).jpg" alt="Infinite corridor author image" class="author-image" />
+								<span class="author-name">Rebecca Smith</span>
+							</div>
+						</div>
+						<img src="content/previews/infinite-corridor.webp" alt="Infinite corridor" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Orange metalic shape</span>
+							<span class="work-publication-date">10.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (6).jpg" alt="Orange metalic shape author image" class="author-image" />
+								<span class="author-name">Andrew Stone</span>
+							</div>
+						</div>
+						<img src="content/previews/orange-metalic-shape.webp" alt="Orange metalic shape" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Pink abstract object</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (5).jpg" alt="Pink abstract object author image" class="author-image" />
+								<span class="author-name">Rebecca Smith</span>
+							</div>
+						</div>
+						<img src="content/previews/pink-abstract-object.webp" alt="Pink abstract object" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Purple abstract art</span>
+							<span class="work-publication-date">09.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (7).jpg" alt="Purple abstract art author image" class="author-image" />
+								<span class="author-name">Anna Shevchenko</span>
+							</div>
+						</div>
+						<img src="content/previews/purple-abstract-art.webp" alt="Purple abstract art" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Purple chain</span>
+							<span class="work-publication-date">10.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (8).jpg" alt="Purple chain author image" class="author-image" />
+								<span class="author-name">Olivia Rodgers</span>
+							</div>
+						</div>
+						<img src="content/previews/purple-chain.webp" alt="Purple chain" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Rainbow hand</span>
+							<span class="work-publication-date">15.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (9).jpg" alt="Rainbow hand author image" class="author-image" />
+								<span class="author-name">Elon Mayday</span>
+							</div>
+						</div>
+						<img src="content/previews/rainbow-hand.webp" alt="Rainbow hand" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Rainbow liquid</span>
+							<span class="work-publication-date">12.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (8).jpg" alt="Rainbow liquid author image" class="author-image" />
+								<span class="author-name">Olivia Rodgers</span>
+							</div>
+						</div>
+						<img src="content/previews/rainbow-liquid.webp" alt="Rainbow liquid" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Volumetric stripes</span>
+							<span class="work-publication-date">11.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (7).jpg" alt="Volumetric stripes author image" class="author-image" />
+								<span class="author-name">Anna Shevchenko</span>
+							</div>
+						</div>
+						<img src="content/previews/volumetric-stripes.webp" alt="Volumetric stripes" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Yellow product</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image (1).jpg" alt="Yellow product author image" class="author-image" />
+								<span class="author-name">Alice Baker</span>
+							</div>
+						</div>
+						<img src="content/previews/yellow-product.webp" alt="Yellow product" class="work-image" />
+					</div>
+					<div class="work-container">
+						<div class="work-description">
+							<span class="work-title">Blue lightroom</span>
+							<span class="work-publication-date">17.08.2024</span>
+							<div class="work-author">
+								<img src="content/authors/uifaces-popular-image.jpg" alt="Blue lightroom author image" class="author-image" />
+								<span class="author-name">Adam Walker</span>
+							</div>
+						</div>
+						<img src="content/previews/blue-lightroom.webp" alt="Blue lightroom" class="work-image" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="footer-container">
+				<span>&copy 2024 Aleksandr Kuraskin</span>
+				<a href="/" class="footer-link">Home</a>
+				<a href="works.html" class="footer-link">Explore</a>
+				<a href="about.html" class="footer-link">About Us</a>
+				<a href="howitworks.html" class="footer-link">How it works</a>
+				<a href="faq.html" class="footer-link">FAQ</a>
+				<a href="contact.html" class="footer-link">Contact</a>
+			</div>
+		</footer>
+	</body>
+	<script src="script.js"></script>
+</html>
